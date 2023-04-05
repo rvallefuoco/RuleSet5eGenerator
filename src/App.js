@@ -4,41 +4,38 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <form>
-        <fieldset>
-          <label>
-            <p>Name</p>
-            <input name="name" />
-          </label>
-
-          <label>
-            <p>STR</p>
-            <input name="str" />
-          </label>
-          <label>
-            <p>DEX</p>
-            <input name="dex" />
-          </label>          
-          <label>
-            <p>INT</p>
-            <input name="int" />
-          </label>
-          <label>  
-            <p>CON</p>
-            <input name="con" />
-          </label>
-          <label>
-            <p>WIS</p>
-            <input name="wis" />
-          </label>
-          <label>
-            <p>CHA</p>
-            <input name="cha" />
-          </label>
-
-          <button type="submit">Generate</button>
-        </fieldset>
-      </form>
+      <CForm className="row g-3">
+        <CCol md={6}>
+          <CFormInput type="email" id="inputEmail4" label="Email" />
+        </CCol>
+        <CCol md={6}>
+          <CFormInput type="password" id="inputPassword4" label="Password" />
+        </CCol>
+        <CCol xs={12}>
+          <CFormInput id="inputAddress" label="Address" placeholder="1234 Main St"/>
+        </CCol>
+        <CCol xs={12}>
+          <CFormInput id="inputAddress2" label="Address 2" placeholder="Apartment, studio, or floor"/>
+        </CCol>
+        <CCol md={6}>
+          <CFormInput id="inputCity" label="City"/>
+        </CCol>
+        <CCol md={4}>
+          <CFormSelect id="inputState" label="State">
+            <option>Choose...</option>
+            <option>...</option>
+          </CFormSelect>
+        </CCol>
+        <CCol md={2}>
+          <CFormInput id="inputZip" label="Zip" />
+        </CCol>
+        <CCol xs={12}>
+          <CFormCheck type="checkbox" id="gridCheck" label="Check me out"/>
+        </CCol>
+        <CCol xs={12}>
+          <CButton type="submit">Sign in</CButton>
+        </CCol>
+      </CForm>
     </div>
   );
 }
